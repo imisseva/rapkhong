@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rap-red: #ff3e3e;
+  --color-rap-black: #000000;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* Chạy hết 50% độ dài mảng chữ lặp lại */
+}
+/* --- Định nghĩa Scroll Animation --- */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Thêm utility class cho Tailwind */
+@utility animate-scroll-entry {
+  animation: fade-in-up linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%; /* Bắt đầu hiện khi vào 10% view, hiện rõ khi vào 30% view */
+}/*
+  ─── FONT: Thêm vào index.html hoặc index.css ────────────────────────
+
+
+  ─── tailwind.config.js ──────────────────────────────────────────────
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Bebas Neue', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif'],
+      },
+      colors: {
+        'rap-red': '#FF2D2D',
+        'rap-gold': '#FFD200',
+      },
+    }
+  }
+*/

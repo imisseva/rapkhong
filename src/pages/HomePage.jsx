@@ -134,7 +134,11 @@ const NewReleaseSection = () => {
       <div ref={ref} className={`flex gap-4 overflow-x-auto ${G} py-10`}
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         {releases.map((r, i) => (
-          <a key={r.id} href={r.link}
+          <a 
+            key={r.id} 
+            href={r.link}
+            target="_blank"             // Thêm dòng này để mở tab mới
+            rel="noopener noreferrer"  // Thêm dòng này để bảo mật và tối ưu hiệu suất
             className="flex-shrink-0 relative group cursor-pointer block"
             style={{ width: 300, height: 300 }}
             onMouseEnter={() => setHov(r.id)}

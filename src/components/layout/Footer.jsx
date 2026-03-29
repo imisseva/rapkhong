@@ -16,7 +16,7 @@ const Footer = () => {
             <p className="text-[10px] uppercase tracking-[0.2em] text-gray-600 mb-1.5 font-medium">
                RAP KHÔNG • HỒ CHÍ MINH, VIỆT NAM
             </p>
-            <p className="text-rap-red font-bold text-sm tracking-wide">BOOKING@RAPKHONG.VN</p>
+            <p className="text-rap-red font-bold text-sm tracking-wide">rapkhong7723@gmail.com</p>
           </div>
 
           <div className="flex gap-7 text-xl text-white">
